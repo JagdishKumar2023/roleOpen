@@ -14,8 +14,32 @@ const Form = () => {
     setInputValues({ ...inputValues, [name]: value });
   };
 
+  const validateForm = () => {
+    const { name, email, password } = inputValues;
+
+    if (name.length < 7) {
+      alert("Name must be 7 letters.");
+      return false;
+    }
+
+    if (!email) {
+      alert("Email is required");
+      return false;
+    }
+
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) return; // Perform validation before submission
+
     console.log(inputValues);
     setInputValues({ name: "", email: "", password: "" }); // Reset all fields
 

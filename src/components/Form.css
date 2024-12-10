@@ -24,12 +24,11 @@ body {
 
 /* Styling the form */
 .form {
-  background-color: #ffffff;
-  border-radius: 10px;
+  height: 400px;
+  width: 400px;
+  border-radius: 30px;
   padding: 20px 30px;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
+  background-color: rgb(249, 249, 248);
 }
 
 /* Form heading */
@@ -59,7 +58,7 @@ body {
   padding: 10px;
   font-size: 14px;
   border: 1px solid #ced4da;
-  color: rgb(251, 108, 19);
+  color: rgb(214, 99, 27);
   border-radius: 5px;
   outline: none;
   transition: all 0.2s ease;
