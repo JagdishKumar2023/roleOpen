@@ -38,7 +38,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!validateForm()) return; // Perform validation before submission
+    if (!validateForm()) return;
 
     console.log(inputValues);
     setInputValues({ name: "", email: "", password: "" }); // Reset all fields
@@ -61,7 +61,7 @@ const Form = () => {
         <h2 className="form-heading">Interview Registration Form</h2>
         <div className="form-group">
           <label className="form-label" htmlFor="name">
-            User Name:
+            Name:
           </label>
           <input
             className="form-input"
