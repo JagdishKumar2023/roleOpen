@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "./Photo.css"; // Import the CSS file
 
 const Photo = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -28,15 +29,17 @@ const Photo = () => {
   };
 
   return (
-    <div>
-      <h1>Upload a Photo</h1>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
+    <div className="photo-container">
+      <h1 className="photo-title">Upload a Photo</h1>
+      <input type="file" className="photo-input" onChange={handleFileChange} />
+      <button className="photo-button" onClick={handleUpload}>
+        Upload
+      </button>
 
       {uploadedFile && (
-        <div>
-          <h2>Uploaded File:</h2>
-          <p>{uploadedFile.originalname}</p>
+        <div className="uploaded-file-container">
+          <h2 className="uploaded-file-title">Uploaded File:</h2>
+          <p className="uploaded-file-name">{uploadedFile.originalname}</p>
         </div>
       )}
     </div>
