@@ -43,6 +43,8 @@ const Form = () => {
     console.log(inputValues);
     setInputValues({ name: "", email: "", password: "" }); // Reset all fields
 
+    // API calling in place after the reset
+
     axios
       .post("http://localhost:4002/InputF", inputValues) // Replace with your API endpoint
       .then((result) => {
@@ -69,6 +71,7 @@ const Form = () => {
             value={inputValues.name}
             name="name"
             onChange={handleChange}
+            placeholder="Enter your name"
             required
           />
         </div>
@@ -82,6 +85,7 @@ const Form = () => {
             value={inputValues.email}
             name="email"
             onChange={handleChange}
+            placeholder="Enter your email"
             required
           />
         </div>
@@ -95,6 +99,7 @@ const Form = () => {
             value={inputValues.password}
             name="password"
             onChange={handleChange}
+            placeholder="Enter password"
             required
           />
         </div>

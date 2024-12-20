@@ -1,9 +1,9 @@
-import Form from "./components/Form";
+import Photo from "./components/Photo";
 
 const App = () => {
   return (
     <div>
-      <Form />
+      <Photo />
     </div>
   );
 };
